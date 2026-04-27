@@ -37,7 +37,7 @@ struct Args {
 
     /// デッキにカードを1枚追加（card_id）
     #[arg(long)]
-    add: Option<String>,
+    add: Vec<String>,
 
     /// デッキからカードを1枚削除（card_id）
     #[arg(long)]
@@ -49,7 +49,7 @@ struct Args {
 }
 
 fn apply_mutations(mut deck: Deck, args: &Args) -> Deck {
-    if let Some(id) = &args.add {
+    for id in &args.add {
         deck.add_one(id);
     }
     if let Some(id) = &args.remove {

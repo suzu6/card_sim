@@ -26,3 +26,34 @@
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
+- id: iron_wave
+  name: "アイアンウェーブ"
+  kind: attack
+  cost: 1
+  base_damage: 5
+  base_block: 5
+  apply_vulnerable: 0
+- id: pommel_strike
+  name: "ポンメルストライク"
+  kind: attack
+  cost: 1
+  base_damage: 9
+  base_block: 0
+  apply_vulnerable: 0
+  draw: 1
+- id: shrug_it_off
+  name: "受け流し"
+  kind: skill
+  cost: 1
+  base_damage: 0
+  base_block: 8
+  apply_vulnerable: 0
+  draw: 1
+- id: rage
+  name: "怒り"
+  kind: skill
+  cost: 0
+  base_damage: 0
+  base_block: 0
+  apply_vulnerable: 0
+  add_block_on_attack_play: 3

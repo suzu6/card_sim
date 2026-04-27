@@ -68,6 +68,9 @@ pub fn compute_turn_result(
             }
             CardKind::Skill => {
                 block += card.base_block;
+                if card.add_block_on_attack_play != 0 {
+                    next_state.block_on_attack_play += card.add_block_on_attack_play;
+                }
             }
             CardKind::Attack => {
                 let mut d = card.base_damage;
@@ -75,6 +78,12 @@ pub fn compute_turn_result(
                     d = apply_vulnerable_damage_multiplier(d);
                 }
                 damage += d;
+                if card.base_block != 0 {
+                    block += card.base_block;
+                }
+                if next_state.block_on_attack_play > 0 {
+                    block += next_state.block_on_attack_play;
+                }
                 if card.apply_vulnerable > 0 {
                     next_state.apply_vulnerable(card.apply_vulnerable);
                 }

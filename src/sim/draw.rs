@@ -161,6 +161,15 @@ pub fn draw_hand_random_5(
     draw_hand_random(draw_pile, discard_pile, 5, rng)
 }
 
+pub fn draw_hand_random_n(
+    draw_pile: &mut Vec<CardInstance>,
+    discard_pile: &mut Vec<CardInstance>,
+    n: usize,
+    rng: &mut StdRng,
+) -> Vec<CardInstance> {
+    draw_hand_random(draw_pile, discard_pile, n, rng)
+}
+
 fn draw_hand_random(
     draw_pile: &mut Vec<CardInstance>,
     discard_pile: &mut Vec<CardInstance>,

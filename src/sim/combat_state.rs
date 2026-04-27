@@ -7,6 +7,7 @@ pub struct CombatState {
     pub draw_pile: Vec<CardInstance>,
     pub discard_pile: Vec<CardInstance>,
     pub enemy_status: EnemyStatus,
+    pub block_on_attack_play: i32,
 }
 
 impl CombatState {
@@ -15,6 +16,7 @@ impl CombatState {
             draw_pile,
             discard_pile: vec![],
             enemy_status: EnemyStatus::new(),
+            block_on_attack_play: 0,
         }
     }
 
