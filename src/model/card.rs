@@ -48,6 +48,8 @@ pub enum CardEffect {
 pub struct CardDef {
     pub id: CardId,
     pub name: String,
+    #[serde(default)]
+    pub name_ja: Option<String>,
     pub kind: CardKind,
     #[serde(default)]
     pub rarity: Option<CardRarity>,
@@ -74,6 +76,7 @@ pub struct CardDef {
     pub upgraded_text: Option<String>,
     #[serde(default)]
     pub upgraded_effects: Option<Vec<CardEffect>>,
+    #[serde(default)]
     pub draw: u8,
     #[serde(default)]
     pub add_block_on_attack_play: i32,
