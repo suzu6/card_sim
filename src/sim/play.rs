@@ -12,7 +12,7 @@ fn card_cost(catalog: &CardCatalog, inst: &CardInstance) -> u8 {
     catalog
         .get(&inst.card_id)
         .unwrap_or_else(|| panic!("未知のcard_id: {}", inst.card_id))
-        .cost
+        .cost_for(inst.upgraded)
 }
 
 fn card_kind(catalog: &CardCatalog, inst: &CardInstance) -> CardKind {

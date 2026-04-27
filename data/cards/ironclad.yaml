@@ -1,0 +1,437 @@
+- id: strike
+  name: "ストライク"
+  kind: attack
+  rarity: starter
+  cost: 1
+  base_damage: 6
+  base_block: 0
+  apply_vulnerable: 0
+- id: defend
+  name: "防御"
+  kind: skill
+  rarity: starter
+  cost: 1
+  base_damage: 0
+  base_block: 5
+  apply_vulnerable: 0
+- id: bash
+  name: "強打"
+  kind: attack
+  rarity: starter
+  cost: 2
+  base_damage: 8
+  base_block: 0
+  apply_vulnerable: 2
+- id: ascenders_bane
+  name: "アセンダーの厄災"
+  kind: curse
+  rarity: status
+  cost: 0
+  base_damage: 0
+  base_block: 0
+  apply_vulnerable: 0
+
+# コモン（まずはスモーク用の最小セット）
+- id: anger
+  name: "怒り"
+  kind: attack
+  rarity: common
+  cost: 0
+  base_damage: 6
+  base_block: 0
+  apply_vulnerable: 0
+  text: "6ダメージを与える。このカードのコピーを1枚捨て札に加える。"
+  effects:
+    - type: damage
+      amount: 6
+      hits: 1
+    - type: add_copy_to_discard
+      card_id: anger
+      upgraded: false
+      count: 1
+  upgraded_text: "8ダメージを与える。このカードのコピーを1枚捨て札に加える。"
+  upgraded_effects:
+    - type: damage
+      amount: 8
+      hits: 1
+    - type: add_copy_to_discard
+      card_id: anger
+      upgraded: true
+      count: 1
+  upgraded_base_damage: 8
+
+- id: iron_wave
+  name: "アイアンウェーブ"
+  kind: attack
+  rarity: common
+  cost: 1
+  base_damage: 5
+  base_block: 5
+  apply_vulnerable: 0
+  text: "5ブロックを得る。5ダメージを与える。"
+  effects:
+    - type: block
+      amount: 5
+    - type: damage
+      amount: 5
+      hits: 1
+  upgraded_text: "7ブロックを得る。7ダメージを与える。"
+  upgraded_effects:
+    - type: block
+      amount: 7
+    - type: damage
+      amount: 7
+      hits: 1
+  upgraded_base_damage: 7
+  upgraded_base_block: 7
+
+- id: thunderclap
+  name: "サンダークラップ"
+  kind: attack
+  rarity: common
+  cost: 1
+  base_damage: 4
+  base_block: 0
+  apply_vulnerable: 1
+  text: "すべての敵に4ダメージを与え、弱体1を付与する。"
+  effects:
+    - type: damage
+      amount: 4
+      hits: 1
+    - type: apply_vulnerable
+      turns: 1
+  upgraded_text: "すべての敵に7ダメージを与え、弱体1を付与する。"
+  upgraded_effects:
+    - type: damage
+      amount: 7
+      hits: 1
+    - type: apply_vulnerable
+      turns: 1
+  upgraded_base_damage: 7
+
+- id: setup_strike
+  name: "セットアップストライク"
+  kind: attack
+  rarity: common
+  cost: 1
+  base_damage: 7
+  base_block: 0
+  apply_vulnerable: 0
+  text: "7ダメージを与える。このターン、筋力2を得る。"
+  effects:
+    - type: damage
+      amount: 7
+      hits: 1
+    - type: gain_strength_this_turn
+      amount: 2
+  upgraded_text: "9ダメージを与える。このターン、筋力3を得る。"
+  upgraded_effects:
+    - type: damage
+      amount: 9
+      hits: 1
+    - type: gain_strength_this_turn
+      amount: 3
+  upgraded_base_damage: 9
+
+- id: sword_boomerang
+  name: "ソードブーメラン"
+  kind: attack
+  rarity: common
+  cost: 1
+  base_damage: 3
+  base_block: 0
+  apply_vulnerable: 0
+  text: "ランダムな敵に3ダメージを3回与える。"
+  effects:
+    - type: damage
+      amount: 3
+      hits: 3
+  upgraded_text: "ランダムな敵に3ダメージを4回与える。"
+  upgraded_effects:
+    - type: damage
+      amount: 3
+      hits: 4
+
+- id: twin_strike
+  name: "ツインストライク"
+  kind: attack
+  rarity: common
+  cost: 1
+  base_damage: 5
+  base_block: 0
+  apply_vulnerable: 0
+  text: "5ダメージを2回与える。"
+  effects:
+    - type: damage
+      amount: 5
+      hits: 2
+  upgraded_text: "7ダメージを2回与える。"
+  upgraded_effects:
+    - type: damage
+      amount: 7
+      hits: 2
+  upgraded_base_damage: 7
+
+- id: headbutt
+  name: "ヘッドバット"
+  kind: attack
+  rarity: common
+  cost: 1
+  base_damage: 9
+  base_block: 0
+  apply_vulnerable: 0
+  text: "9ダメージを与える。捨て札のカードを1枚山札の一番上に置く。"
+  effects:
+    - type: damage
+      amount: 9
+      hits: 1
+    - type: put_discard_on_top
+      count: 1
+  upgraded_text: "12ダメージを与える。捨て札のカードを1枚山札の一番上に置く。"
+  upgraded_effects:
+    - type: damage
+      amount: 12
+      hits: 1
+    - type: put_discard_on_top
+      count: 1
+  upgraded_base_damage: 12
+
+- id: body_slam
+  name: "ボディスラム"
+  kind: attack
+  rarity: common
+  cost: 1
+  base_damage: 0
+  base_block: 0
+  apply_vulnerable: 0
+  text: "自身のブロック値に等しいダメージを与える。"
+  effects:
+    - type: unsupported
+      reason: "ブロック参照ダメージ（ボディスラム）は未対応"
+
+- id: pommel_strike
+  name: "ポンメルストライク"
+  kind: attack
+  rarity: common
+  cost: 1
+  base_damage: 9
+  base_block: 0
+  apply_vulnerable: 0
+  text: "9ダメージを与える。カードを1枚引く。"
+  effects:
+    - type: damage
+      amount: 9
+      hits: 1
+    - type: draw
+      count: 1
+  upgraded_text: "10ダメージを与える。カードを2枚引く。"
+  upgraded_effects:
+    - type: damage
+      amount: 10
+      hits: 1
+    - type: draw
+      count: 2
+  upgraded_base_damage: 10
+
+- id: open_a_blood_route
+  name: "血路を開く"
+  kind: attack
+  rarity: common
+  cost: 1
+  base_damage: 9
+  base_block: 0
+  apply_vulnerable: 0
+  text: "HPを1失う。すべての敵に9ダメージを与える。"
+  effects:
+    - type: lose_hp
+      amount: 1
+    - type: damage
+      amount: 9
+      hits: 1
+  upgraded_text: "HPを1失う。すべての敵に13ダメージを与える。"
+  upgraded_effects:
+    - type: lose_hp
+      amount: 1
+    - type: damage
+      amount: 13
+      hits: 1
+  upgraded_base_damage: 13
+
+- id: lava_fist
+  name: "溶岩の拳"
+  kind: attack
+  rarity: common
+  cost: 1
+  base_damage: 10
+  base_block: 0
+  apply_vulnerable: 0
+  text: "10ダメージを与える。敵の弱体を2倍にする。廃棄。"
+  effects:
+    - type: damage
+      amount: 10
+      hits: 1
+    - type: exhaust_self
+    - type: unsupported
+      reason: "弱体2倍は未対応"
+  upgraded_text: "14ダメージを与える。敵の弱体を2倍にする。廃棄。"
+  upgraded_effects:
+    - type: damage
+      amount: 14
+      hits: 1
+    - type: exhaust_self
+    - type: unsupported
+      reason: "弱体2倍は未対応"
+  upgraded_base_damage: 14
+
+- id: perfect_strike
+  name: "パーフェクトストライク"
+  kind: attack
+  rarity: common
+  cost: 2
+  base_damage: 6
+  base_block: 0
+  apply_vulnerable: 0
+  text: "6ダメージを与える。「ストライク」を含むすべてのカード1枚につき、追加で2ダメージを与える。"
+  effects:
+    - type: unsupported
+      reason: "ストライク枚数参照の追加ダメージは未対応"
+
+- id: cinder
+  name: "黒焦げ"
+  kind: attack
+  rarity: common
+  cost: 2
+  base_damage: 18
+  base_block: 0
+  apply_vulnerable: 0
+  text: "18ダメージを与える。ランダムなカードを1枚廃棄する。"
+  effects:
+    - type: damage
+      amount: 18
+      hits: 1
+    - type: unsupported
+      reason: "ランダム廃棄は未対応"
+  upgraded_text: "24ダメージを与える。ランダムなカードを1枚廃棄する。"
+  upgraded_effects:
+    - type: damage
+      amount: 24
+      hits: 1
+    - type: unsupported
+      reason: "ランダム廃棄は未対応"
+  upgraded_base_damage: 24
+
+- id: bloodletting
+  name: "瀉血"
+  kind: skill
+  rarity: common
+  cost: 0
+  base_damage: 0
+  base_block: 0
+  apply_vulnerable: 0
+  text: "HP3を失う。エナジー2を得る。"
+  effects:
+    - type: lose_hp
+      amount: 3
+    - type: gain_energy
+      amount: 2
+
+- id: shrug_it_off
+  name: "受け流し"
+  kind: skill
+  rarity: common
+  cost: 1
+  base_damage: 0
+  base_block: 8
+  apply_vulnerable: 0
+  text: "8ブロックを得る。カードを1枚引く。"
+  effects:
+    - type: block
+      amount: 8
+    - type: draw
+      count: 1
+  upgraded_text: "11ブロックを得る。カードを1枚引く。"
+  upgraded_effects:
+    - type: block
+      amount: 11
+    - type: draw
+      count: 1
+  upgraded_base_block: 11
+
+- id: shiver
+  name: "身震い"
+  kind: skill
+  rarity: common
+  cost: 1
+  base_damage: 0
+  base_block: 0
+  apply_vulnerable: 3
+  text: "弱体3を与える。廃棄。"
+  effects:
+    - type: apply_vulnerable
+      turns: 3
+    - type: exhaust_self
+  upgraded_text: "弱体4を与える。廃棄。"
+  upgraded_effects:
+    - type: apply_vulnerable
+      turns: 4
+    - type: exhaust_self
+  upgraded_apply_vulnerable: 4
+
+- id: true_grit
+  name: "不屈の闘志"
+  kind: skill
+  rarity: common
+  cost: 1
+  base_damage: 0
+  base_block: 7
+  apply_vulnerable: 0
+  text: "7ブロックを得る。ランダムなカードを1枚廃棄する。"
+  effects:
+    - type: block
+      amount: 7
+    - type: unsupported
+      reason: "ランダム廃棄は未対応"
+  upgraded_text: "9ブロックを得る。カードを1枚廃棄する。"
+  upgraded_effects:
+    - type: block
+      amount: 9
+    - type: unsupported
+      reason: "廃棄（選択/ランダム）は未対応"
+  upgraded_base_block: 9
+
+- id: armaments
+  name: "武装"
+  kind: skill
+  rarity: common
+  cost: 1
+  base_damage: 0
+  base_block: 5
+  apply_vulnerable: 0
+  text: "5ブロックを得る。手札のカードを1枚アップグレードする。"
+  effects:
+    - type: block
+      amount: 5
+    - type: unsupported
+      reason: "手札アップグレードは未対応"
+
+- id: blood_wall
+  name: "血の壁"
+  kind: skill
+  rarity: common
+  cost: 2
+  base_damage: 0
+  base_block: 16
+  apply_vulnerable: 0
+  text: "HPを2失う。16ブロックを得る。"
+  effects:
+    - type: lose_hp
+      amount: 2
+    - type: block
+      amount: 16
+  upgraded_text: "HPを2失う。20ブロックを得る。"
+  upgraded_effects:
+    - type: lose_hp
+      amount: 2
+    - type: block
+      amount: 20
+  upgraded_base_block: 20

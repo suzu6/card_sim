@@ -1,6 +1,4 @@
 use crate::model::{CardCatalog, Deck};
-use rand::{rngs::StdRng, seq::SliceRandom};
-
 #[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub struct CardInstance {
     pub instance_id: u32,
@@ -151,42 +149,4 @@ pub fn enumerate_draw(
         });
     }
     out
-}
-
-pub fn draw_hand_random_5(
-    draw_pile: &mut Vec<CardInstance>,
-    discard_pile: &mut Vec<CardInstance>,
-    rng: &mut StdRng,
-) -> Vec<CardInstance> {
-    draw_hand_random(draw_pile, discard_pile, 5, rng)
-}
-
-pub fn draw_hand_random_n(
-    draw_pile: &mut Vec<CardInstance>,
-    discard_pile: &mut Vec<CardInstance>,
-    n: usize,
-    rng: &mut StdRng,
-) -> Vec<CardInstance> {
-    draw_hand_random(draw_pile, discard_pile, n, rng)
-}
-
-fn draw_hand_random(
-    draw_pile: &mut Vec<CardInstance>,
-    discard_pile: &mut Vec<CardInstance>,
-    n: usize,
-    rng: &mut StdRng,
-) -> Vec<CardInstance> {
-    let mut hand = vec![];
-    for _ in 0..n {
-        if draw_pile.is_empty() {
-            if discard_pile.is_empty() {
-                break;
-            }
-            discard_pile.shuffle(rng);
-            draw_pile.append(discard_pile);
-        }
-        let c = draw_pile.pop().expect("山札が空のはずがない");
-        hand.push(c);
-    }
-    hand
 }
