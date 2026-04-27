@@ -20,6 +20,10 @@ pub struct CardDef {
     pub base_damage: i32,
     pub base_block: i32,
     pub apply_vulnerable: u8,
+    #[serde(default)]
+    pub draw: u8,
+    #[serde(default)]
+    pub add_block_on_attack_play: i32,
 }
 
 #[derive(Debug, Clone)]
