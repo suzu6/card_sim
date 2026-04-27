@@ -1,0 +1,9 @@
+cards:
+  - id: strike
+    count: 5
+  - id: defend
+    count: 4
+  - id: bash
+    count: 1
+  - id: ascenders_bane
+    count: 1
