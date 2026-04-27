@@ -24,3 +24,7 @@ target
 
 # 収集・生成物
 data/sources/
+
+# Python（ローカル生成物）
+**/__pycache__/
+*.pyc
