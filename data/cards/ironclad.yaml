@@ -131,13 +131,26 @@
   kind: attack
   rarity: common
   cost: 2
-  base_damage: 0
+  base_damage: 8
   base_block: 0
-  apply_vulnerable: 0
-  text: ''
+  apply_vulnerable: 2
+  text: Deal 8 damage. Apply 2 Vulnerable.
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: damage
+    amount: 8
+    hits: 1
+  - type: apply_vulnerable
+    turns: 2
+  upgraded_text: Deal 10 damage. Apply 3 Vulnerable.
+  upgraded_effects:
+  - type: damage
+    amount: 10
+    hits: 1
+  - type: apply_vulnerable
+    turns: 3
+  upgraded_base_damage: 10
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 3
 - id: battle-trance
   name: Battle Trance
   name_ja: バトルトランス
@@ -562,12 +575,19 @@
   rarity: common
   cost: 1
   base_damage: 0
-  base_block: 0
+  base_block: 5
   apply_vulnerable: 0
-  text: ''
+  text: Gain 5 Block.
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: block
+    amount: 5
+  upgraded_text: Gain 8 Block.
+  upgraded_effects:
+  - type: block
+    amount: 8
+  upgraded_base_damage: 0
+  upgraded_base_block: 8
+  upgraded_apply_vulnerable: 0
 - id: demon-form
   name: Demon Form
   name_ja: 悪魔化
@@ -1602,12 +1622,23 @@
   rarity: common
   cost: 1
   base_damage: 0
-  base_block: 0
+  base_block: 8
   apply_vulnerable: 0
-  text: ''
+  text: Gain 8 Block. Draw 1 card.
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: block
+    amount: 8
+  - type: draw
+    count: 1
+  upgraded_text: Gain 11 Block. Draw 1 card.
+  upgraded_effects:
+  - type: block
+    amount: 11
+  - type: draw
+    count: 1
+  upgraded_base_damage: 0
+  upgraded_base_block: 11
+  upgraded_apply_vulnerable: 0
 - id: spite
   name: Spite
   name_ja: 悪意
