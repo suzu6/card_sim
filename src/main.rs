@@ -8,7 +8,7 @@ use io::{load_card_catalog, load_deck, load_enemy_pattern};
 use model::{CardRarity, Deck};
 use report::{
     compute_score, insight_from_deltas, render_rows_json, render_rows_table, render_rows_tsv,
-    supported_level, ScoreWeights, SweepRow,
+    supported_level, ScoreWeights, SupportedLevel, SweepRow,
 };
 use sim::{simulate, SimulationInput};
 use std::{
@@ -250,7 +250,17 @@ fn run_sweep_for_rarities(
         });
     }
 
-    rows.sort_by(|a, b| b.score.partial_cmp(&a.score).unwrap_or(std::cmp::Ordering::Equal));
+    let unsupported_count = rows
+        .iter()
+        .filter(|r| r.supported == SupportedLevel::Unsupported)
+        .count();
+    let mut rows_filtered: Vec<SweepRow> = rows
+        .into_iter()
+        .filter(|r| r.supported != SupportedLevel::Unsupported)
+        .collect();
+
+    rows_filtered
+        .sort_by(|a, b| b.score.partial_cmp(&a.score).unwrap_or(std::cmp::Ordering::Equal));
 
     fs::create_dir_all(&args.out_dir)?;
     let basename = build_sweep_output_basename(args, prefix);
@@ -270,6 +280,10 @@ fn run_sweep_for_rarities(
         "- **score_weights (damage,taken,block)**: `{},{},{}`\n",
         args.score_weights.damage, args.score_weights.taken, args.score_weights.block
     ));
+    md.push_str(&format!(
+        "- **unsupported_cards_excluded**: `{}`\n",
+        unsupported_count
+    ));
     md.push_str("\n### baseline\n");
     md.push_str(&format!(
         "- turn1_expected_damage: `{:.6}`\n- turn1_expected_block: `{:.6}`\n- total_expected_damage: `{:.6}`\n- total_expected_block: `{:.6}`\n- total_expected_taken: `{:.6}`\n",
@@ -284,23 +298,23 @@ fn run_sweep_for_rarities(
     md.push_str("### 一覧（score降順）\n\n");
     match args.format {
         OutputFormat::Table => {
-            md.push_str(&render_rows_table(&rows));
+            md.push_str(&render_rows_table(&rows_filtered));
         }
         OutputFormat::Tsv => {
             md.push_str("```tsv\n");
-            md.push_str(&render_rows_tsv(&rows));
+            md.push_str(&render_rows_tsv(&rows_filtered));
             md.push_str("```\n");
         }
         OutputFormat::Json => {
             md.push_str("```json\n");
-            md.push_str(&render_rows_json(&rows)?);
+            md.push_str(&render_rows_json(&rows_filtered)?);
             md.push_str("\n```\n");
         }
     }
 
     fs::write(&md_path, md)?;
     // CSVはformatとは独立に必ず保存（表結果を機械処理しやすくするため）
-    fs::write(&csv_path, report::render_rows_csv(&rows))?;
+    fs::write(&csv_path, report::render_rows_csv(&rows_filtered))?;
 
     Ok((md_path, csv_path))
 }
