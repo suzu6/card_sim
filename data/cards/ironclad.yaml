@@ -131,13 +131,26 @@
   kind: attack
   rarity: common
   cost: 2
-  base_damage: 0
+  base_damage: 8
   base_block: 0
-  apply_vulnerable: 0
-  text: ''
+  apply_vulnerable: 2
+  text: Deal 8 damage. Apply 2 Vulnerable.
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: damage
+    amount: 8
+    hits: 1
+  - type: apply_vulnerable
+    turns: 2
+  upgraded_text: Deal 10 damage. Apply 3 Vulnerable.
+  upgraded_effects:
+  - type: damage
+    amount: 10
+    hits: 1
+  - type: apply_vulnerable
+    turns: 3
+  upgraded_base_damage: 10
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 3
 - id: battle-trance
   name: Battle Trance
   name_ja: バトルトランス
@@ -206,17 +219,17 @@
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: Upgraded Bloodletting Lose 3 HP. Gain . Character Ironclad Type Skill Cost
-    0 Rarity Common Bloodletting + UPGRADED Lose 3 HP. Gain . Jorbs Ironclad has access
-    to some impressively breakable energy gain, with Bloodletting at Common being
-    one example.
+  text: HP3を失う。エナジーを2得る。
   effects:
   - type: lose_hp
     amount: 3
-  upgraded_text: Lose 3 HP. Gain . Jorbs Ironclad has access to some impressively
-    breakable energy gain, with Bloodletting at Common being one example.
+  - type: gain_energy
+    amount: 2
+  upgraded_text: HP3を失う。エナジーを3得る。
   upgraded_effects:
   - type: lose_hp
+    amount: 3
+  - type: gain_energy
     amount: 3
   upgraded_base_damage: 0
   upgraded_base_block: 0
@@ -254,13 +267,14 @@
   kind: attack
   rarity: common
   cost: 1
+  upgraded_cost: 0
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 自身のブロック値に等しいダメージを与える。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 自身のブロック値に等しいダメージを与える'
 - id: brand
   name: Brand
   name_ja: 焼印
@@ -270,25 +284,22 @@
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: Upgraded Brand Lose 1 HP. Exhaust 1 card. Gain 1 Strength . Character Ironclad
-    Type Skill Cost 0 Rarity Rare Brand + UPGRADED Lose 1 HP. Exhaust 1 card. Gain
-    2 Strength . Jorbs The important thing to remember when evaluating Brand is that
-    exhausting a card is a large upside. It'll make powers like Feel No Pain and Dark
-    Embrace work, get rid of nasty statuses in some of the harder fights in the game,
-    or let you trim the less impactful cards from your deck as a fight goes longer,
-    so that each of your hands can be better than the last.
+  text: HPを1失う。カードを1枚廃棄する。筋力1を得る。
   effects:
   - type: lose_hp
     amount: 1
-  upgraded_text: Lose 1 HP. Exhaust 1 card. Gain 2 Strength . Jorbs The important
-    thing to remember when evaluating Brand is that exhausting a card is a large upside.
-    It'll make powers like Feel No Pain and Dark Embrace work, get rid of nasty statuses
-    in some of the harder fights in the game, or let you trim the less impactful cards
-    from your deck as a fight goes longer, so that each of your hands can be better
-    than the last.
+  - type: gain_strength
+    amount: 1
+  - type: unsupported
+    reason: '未対応の効果: カードを1枚廃棄する（選択）'
+  upgraded_text: HPを1失う。カードを1枚廃棄する。筋力2を得る。
   upgraded_effects:
   - type: lose_hp
     amount: 1
+  - type: gain_strength
+    amount: 2
+  - type: unsupported
+    reason: '未対応の効果: カードを1枚廃棄する（選択）'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -331,26 +342,52 @@
   kind: attack
   rarity: common
   cost: 1
-  base_damage: 0
+  base_damage: 9
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: HPを1失う。すべての敵に9ダメージを与える。
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: lose_hp
+    amount: 1
+  - type: damage
+    amount: 9
+    hits: 1
+  upgraded_text: HPを1失う。すべての敵に13ダメージを与える。
+  upgraded_effects:
+  - type: lose_hp
+    amount: 1
+  - type: damage
+    amount: 13
+    hits: 1
+  upgraded_base_damage: 13
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: bully
   name: Bully
   name_ja: ごろつき
   kind: attack
   rarity: uncommon
   cost: 0
-  base_damage: 0
+  base_damage: 4
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 4ダメージを与える。敵に付与している弱体1につき、追加で2ダメージを与える。
   effects:
+  - type: damage
+    amount: 4
+    hits: 1
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 敵に付与している弱体数に応じた追加ダメージ'
+  upgraded_text: 4ダメージを与える。敵に付与している弱体1につき、追加で3ダメージを与える。
+  upgraded_effects:
+  - type: damage
+    amount: 4
+    hits: 1
+  - type: unsupported
+    reason: '未対応の効果: 敵に付与している弱体数に応じた追加ダメージ'
+  upgraded_base_damage: 4
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: burning-pact
   name: Burning Pact
   name_ja: 焦熱の契約
@@ -423,13 +460,26 @@
   kind: attack
   rarity: common
   cost: 2
-  base_damage: 0
+  base_damage: 18
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 18ダメージを与える。ランダムなカードを1枚廃棄する。
   effects:
+  - type: damage
+    amount: 18
+    hits: 1
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: ランダムなカードを1枚廃棄する'
+  upgraded_text: 24ダメージを与える。ランダムなカードを1枚廃棄する。
+  upgraded_effects:
+  - type: damage
+    amount: 24
+    hits: 1
+  - type: unsupported
+    reason: '未対応の効果: ランダムなカードを1枚廃棄する'
+  upgraded_base_damage: 24
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: clash
   name: Clash
   name_ja: 衝突
@@ -450,12 +500,23 @@
   rarity: uncommon
   cost: 1
   base_damage: 0
-  base_block: 0
+  base_block: 5
   apply_vulnerable: 0
-  text: ''
+  text: 5ブロックを得る。このターン、弱体中の敵から受けるダメージが50%減少する。
   effects:
+  - type: block
+    amount: 5
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 弱体中の敵から受けるダメージが50%減少する'
+  upgraded_text: 8ブロックを得る。このターン、弱体中の敵から受けるダメージが50%減少する。
+  upgraded_effects:
+  - type: block
+    amount: 8
+  - type: unsupported
+    reason: '未対応の効果: 弱体中の敵から受けるダメージが50%減少する'
+  upgraded_base_damage: 0
+  upgraded_base_block: 8
+  upgraded_apply_vulnerable: 0
 - id: conflagration
   name: Conflagration
   name_ja: 猛火
@@ -475,6 +536,7 @@
   kind: power
   rarity: ancient
   cost: 3
+  upgraded_cost: 2
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
@@ -562,12 +624,19 @@
   rarity: common
   cost: 1
   base_damage: 0
-  base_block: 0
+  base_block: 5
   apply_vulnerable: 0
-  text: ''
+  text: Gain 5 Block.
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: block
+    amount: 5
+  upgraded_text: Gain 8 Block.
+  upgraded_effects:
+  - type: block
+    amount: 8
+  upgraded_base_damage: 0
+  upgraded_base_block: 8
+  upgraded_apply_vulnerable: 0
 - id: demon-form
   name: Demon Form
   name_ja: 悪魔化
@@ -707,18 +776,30 @@
   rarity: uncommon
   cost: 1
   base_damage: 0
-  base_block: 0
+  base_block: 8
   apply_vulnerable: 0
-  text: ''
+  text: 8ブロックを得る。このターン、カードを廃棄している場合、さらに8ブロックを得る。
   effects:
+  - type: block
+    amount: 8
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: このターン廃棄している場合、追加でブロックを得る'
+  upgraded_text: 11ブロックを得る。このターン、カードを廃棄している場合、さらに11ブロックを得る。
+  upgraded_effects:
+  - type: block
+    amount: 11
+  - type: unsupported
+    reason: '未対応の効果: このターン廃棄している場合、追加でブロックを得る'
+  upgraded_base_damage: 0
+  upgraded_base_block: 11
+  upgraded_apply_vulnerable: 0
 - id: expect-a-fight
   name: Expect a Fight
   name_ja: 戦いの予感
   kind: skill
   rarity: uncommon
   cost: 2
+  upgraded_cost: 1
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
@@ -808,32 +889,18 @@
   kind: attack
   rarity: rare
   cost: 2
-  base_damage: 7
+  base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: Upgraded Fiend Fire Exhaust your Hand . Deal 7 damage for each card Exhausted
-    . Exhaust . Character Ironclad Type Attack Cost 2 Rarity Rare Fiend Fire + UPGRADED
-    Exhaust your Hand . Deal 10 damage for each card Exhausted . Exhaust . Jorbs Fiend
-    Fire is largely upsides. Lots of damage, very quickly, and lots of chances to
-    benefit from exhaust synergies like Feel No Pain or Dark Embrace. It goes especially
-    well with ways to fill up your hand like Battle Trance or Offering. It's also
-    an excellent target for some game-winning enchants. Put 8 Vigor or +50% damage
-    on this from an event and it'll one-shot an awful lot of fights for you.
+  text: 手札を全て廃棄する。廃棄したカード1枚につき、7ダメージを与える。廃棄。
   effects:
-  - type: damage
-    amount: 7
-    hits: 1
-  upgraded_text: Exhaust your Hand . Deal 10 damage for each card Exhausted . Exhaust
-    . Jorbs Fiend Fire is largely upsides. Lots of damage, very quickly, and lots
-    of chances to benefit from exhaust synergies like Feel No Pain or Dark Embrace.
-    It goes especially well with ways to fill up your hand like Battle Trance or Offering.
-    It's also an excellent target for some game-winning enchants. Put 8 Vigor or +50%
-    damage on this from an event and it'll one-shot an awful lot of fights for you.
+  - type: unsupported
+    reason: '未対応の効果: 手札全廃棄＋廃棄枚数に応じたダメージ'
+  upgraded_text: 手札を全て廃棄する。廃棄したカード1枚につき、10ダメージを与える。廃棄。
   upgraded_effects:
-  - type: damage
-    amount: 10
-    hits: 1
-  upgraded_base_damage: 10
+  - type: unsupported
+    reason: '未対応の効果: 手札全廃棄＋廃棄枚数に応じたダメージ'
+  upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
 - id: fight-me
@@ -845,24 +912,24 @@
   base_damage: 5
   base_block: 0
   apply_vulnerable: 0
-  text: Upgraded Fight Me! Deal 5 damage twice. Gain 3 Strength . The enemy gains
-    1 Strength . Character Ironclad Type Attack Cost 2 Rarity Uncommon Fight Me! +
-    UPGRADED Deal 6 damage twice. Gain 4 Strength . The enemy gains 1 Strength . Jorbs
-    I've found the Strength-scaling elements of Ironclad's card pool underwhelming
-    so far. When cards like Ashen Strike exist, I'm not sure that there's enough payoff
-    for paying two energy for something like Fight Me!
+  text: 5ダメージを2回与える。筋力3を得る。敵は筋力1を得る。
   effects:
   - type: damage
     amount: 5
-    hits: 1
-  upgraded_text: Deal 6 damage twice. Gain 4 Strength . The enemy gains 1 Strength
-    . Jorbs I've found the Strength-scaling elements of Ironclad's card pool underwhelming
-    so far. When cards like Ashen Strike exist, I'm not sure that there's enough payoff
-    for paying two energy for something like Fight Me!
+    hits: 2
+  - type: gain_strength
+    amount: 3
+  - type: unsupported
+    reason: '未対応の効果: 敵が筋力を得る'
+  upgraded_text: 6ダメージを2回与える。筋力4を得る。敵は筋力1を得る。
   upgraded_effects:
   - type: damage
     amount: 6
-    hits: 1
+    hits: 2
+  - type: gain_strength
+    amount: 4
+  - type: unsupported
+    reason: '未対応の効果: 敵が筋力を得る'
   upgraded_base_damage: 6
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -915,38 +982,14 @@
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: Upgraded Forgotten Ritual If you Exhausted a card this turn, gain . Exhaust
-    . Character Ironclad Type Skill Cost 1 Rarity Uncommon Forgotten Ritual + UPGRADED
-    If you Exhausted a card this turn, gain 4 . Exhaust . Jorbs Similar to Expect
-    a Fight, Forgotten Ritual is a way to "accidentally" end up in a situation where
-    you're able to afford every card until you've drawn Forgotten Ritual again. Put
-    some Burning Pacts and Pommel Strike+'s into a deck with this card and you'll
-    theoretically kill every enemy on turn one, as long as you can remove the other
-    cards which are in the way of your combo.
+  text: このターン、カードを廃棄していた場合、エナジーを3得る。廃棄。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Forgotten Ritual If you Exhausted a card this turn,
-      gain . Exhaust . Character Ironclad Type Skill Cost 1 Rarity Uncommon Forgotten
-      Ritual + UPGRADED If you Exhausted a card this turn, gain 4 . Exhaust . Jorbs
-      Similar to Expect a Fight, Forgotten Ritual is a way to "accidentally" end up
-      in a situation where you''re able to afford every card until you''ve drawn Forgotten
-      Ritual again. Put some Burning Pacts and Pommel Strike+''s into a deck with
-      this card and you''ll theoretically kill every enemy on turn one, as long as
-      you can remove the other cards which are in the way of your combo.'
-  upgraded_text: If you Exhausted a card this turn, gain 4 . Exhaust . Jorbs Similar
-    to Expect a Fight, Forgotten Ritual is a way to "accidentally" end up in a situation
-    where you're able to afford every card until you've drawn Forgotten Ritual again.
-    Put some Burning Pacts and Pommel Strike+'s into a deck with this card and you'll
-    theoretically kill every enemy on turn one, as long as you can remove the other
-    cards which are in the way of your combo.
+    reason: '未対応の効果: このターン廃棄していた場合にエナジーを得る＋廃棄'
+  upgraded_text: このターン、カードを廃棄していた場合、エナジーを4得る。廃棄。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: If you Exhausted a card this turn, gain 4 . Exhaust . Jorbs
-      Similar to Expect a Fight, Forgotten Ritual is a way to "accidentally" end up
-      in a situation where you''re able to afford every card until you''ve drawn Forgotten
-      Ritual again. Put some Burning Pacts and Pommel Strike+''s into a deck with
-      this card and you''ll theoretically kill every enemy on turn one, as long as
-      you can remove the other cards which are in the way of your combo.'
+    reason: '未対応の効果: このターン廃棄していた場合にエナジーを得る＋廃棄'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -956,24 +999,18 @@
   kind: skill
   rarity: common
   cost: 1
+  upgraded_cost: 0
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: Upgraded Havoc Play the top card of your Draw Pile and Exhaust it. Character
-    Ironclad Type Skill Cost 1 Rarity Common Havoc + UPGRADED Cost changes from 1
-    to 0 Jorbs One of Ironclad's trickiest cards, both to evaluate and to use correctly.
+  text: 山札の一番上にあるカードをプレイし、それを廃棄する。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Havoc Play the top card of your Draw Pile and Exhaust
-      it. Character Ironclad Type Skill Cost 1 Rarity Common Havoc + UPGRADED Cost
-      changes from 1 to 0 Jorbs One of Ironclad''s trickiest cards, both to evaluate
-      and to use correctly.'
-  upgraded_text: Cost changes from 1 to 0 Jorbs One of Ironclad's trickiest cards,
-    both to evaluate and to use correctly.
+    reason: '未対応の効果: 山札の一番上のカードを自動でプレイして廃棄する'
+  upgraded_text: 山札の一番上にあるカードをプレイし、それを廃棄する。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Cost changes from 1 to 0 Jorbs One of Ironclad''s trickiest
-      cards, both to evaluate and to use correctly.'
+    reason: '未対応の効果: 山札の一番上のカードを自動でプレイして廃棄する'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -986,28 +1023,20 @@
   base_damage: 9
   base_block: 0
   apply_vulnerable: 0
-  text: Upgraded Headbutt Deal 9 damage. Put a card from your Discard Pile on top
-    of your Draw Pile . Character Ironclad Type Attack Cost 1 Rarity Common Headbutt
-    + UPGRADED Deal 12 damage. Put a card from your Discard Pile on top of your Draw
-    Pile . Jorbs Slay the Spire 2 has some cards which are strong enough that putting
-    a Headbutt into your deck to get to play them more often is worthwhile. This can
-    be true even in Act 3, but in Act 1 in particular it can be an okay damage card
-    which lets you play your much better card more often. Also has a notable synergy
-    with Havoc, if you have one of those.
+  text: 9ダメージを与える。捨て札のカードを1枚山札の一番上に置く。
   effects:
   - type: damage
     amount: 9
     hits: 1
-  upgraded_text: Deal 12 damage. Put a card from your Discard Pile on top of your
-    Draw Pile . Jorbs Slay the Spire 2 has some cards which are strong enough that
-    putting a Headbutt into your deck to get to play them more often is worthwhile.
-    This can be true even in Act 3, but in Act 1 in particular it can be an okay damage
-    card which lets you play your much better card more often. Also has a notable
-    synergy with Havoc, if you have one of those.
+  - type: put_discard_on_top
+    count: 1
+  upgraded_text: 12ダメージを与える。捨て札のカードを1枚山札の一番上に置く。
   upgraded_effects:
   - type: damage
     amount: 12
     hits: 1
+  - type: put_discard_on_top
+    count: 1
   upgraded_base_damage: 12
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -1017,6 +1046,7 @@
   kind: power
   rarity: rare
   cost: 2
+  upgraded_cost: 1
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
@@ -1140,6 +1170,7 @@
   kind: skill
   rarity: uncommon
   cost: 1
+  upgraded_cost: 0
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
@@ -1221,25 +1252,14 @@
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: Upgraded Inflame Gain 2 Strength . Character Ironclad Type Power Cost 1 Rarity
-    Uncommon Inflame + UPGRADED Gain 3 Strength . Jorbs 2(3) Strength can make a difference
-    in some Elite and Boss fights, and can synergize with multi-hit cards. It's especially
-    good with Thrash, which gains more damage from all the cards it eats.
+  text: 筋力2を得る。
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Inflame Gain 2 Strength . Character Ironclad Type
-      Power Cost 1 Rarity Uncommon Inflame + UPGRADED Gain 3 Strength . Jorbs 2(3)
-      Strength can make a difference in some Elite and Boss fights, and can synergize
-      with multi-hit cards. It''s especially good with Thrash, which gains more damage
-      from all the cards it eats.'
-  upgraded_text: Gain 3 Strength . Jorbs 2(3) Strength can make a difference in some
-    Elite and Boss fights, and can synergize with multi-hit cards. It's especially
-    good with Thrash, which gains more damage from all the cards it eats.
+  - type: gain_strength
+    amount: 2
+  upgraded_text: 筋力3を得る。
   upgraded_effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: Gain 3 Strength . Jorbs 2(3) Strength can make a difference
-      in some Elite and Boss fights, and can synergize with multi-hit cards. It''s
-      especially good with Thrash, which gains more damage from all the cards it eats.'
+  - type: gain_strength
+    amount: 3
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -1354,13 +1374,28 @@
   kind: attack
   rarity: common
   cost: 1
-  base_damage: 0
+  base_damage: 10
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 10ダメージを与える。敵の弱体を2倍にする。廃棄。
   effects:
+  - type: damage
+    amount: 10
+    hits: 1
+  - type: exhaust_self
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 敵の弱体を2倍にする'
+  upgraded_text: 14ダメージを与える。敵の弱体を2倍にする。廃棄。
+  upgraded_effects:
+  - type: damage
+    amount: 14
+    hits: 1
+  - type: exhaust_self
+  - type: unsupported
+    reason: '未対応の効果: 敵の弱体を2倍にする'
+  upgraded_base_damage: 14
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: not-yet
   name: Not Yet
   name_ja: 未だ倒れず
@@ -1370,10 +1405,19 @@
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: HPを10回復する。廃棄。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 回復'
+  - type: exhaust_self
+  upgraded_text: HPを13回復する。廃棄。
+  upgraded_effects:
+  - type: unsupported
+    reason: '未対応の効果: 回復'
+  - type: exhaust_self
+  upgraded_base_damage: 0
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: offering
   name: Offering
   name_ja: 供物
@@ -1383,10 +1427,27 @@
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: HP6を失う。エナジーを2得る。カードを3枚引く。廃棄。
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: lose_hp
+    amount: 6
+  - type: gain_energy
+    amount: 2
+  - type: draw
+    count: 3
+  - type: exhaust_self
+  upgraded_text: HP6を失う。エナジーを2得る。カードを5枚引く。廃棄。
+  upgraded_effects:
+  - type: lose_hp
+    amount: 6
+  - type: gain_energy
+    amount: 2
+  - type: draw
+    count: 5
+  - type: exhaust_self
+  upgraded_base_damage: 0
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: one-two-punch
   name: One-Two Punch
   name_ja: ワン・ツーパンチ
@@ -1396,23 +1457,43 @@
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: このターン、次にプレイするアタックを2回プレイする。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 次にプレイするアタックを2回プレイする'
+  upgraded_text: このターン、次にプレイする2枚のアタックを2回プレイする。
+  upgraded_effects:
+  - type: unsupported
+    reason: '未対応の効果: 次にプレイするアタックを2回プレイする'
+  upgraded_base_damage: 0
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: pacts-end
   name: Pact's End
   name_ja: 契約の終わり
   kind: attack
   rarity: rare
   cost: 0
-  base_damage: 0
+  base_damage: 17
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 廃棄札にカードが3枚以上ある場合のみプレイ可能。すべての敵に17ダメージを与える。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 廃棄札の枚数条件＋全体攻撃'
+  - type: damage
+    amount: 17
+    hits: 1
+  upgraded_text: 廃棄札にカードが3枚以上ある場合のみプレイ可能。すべての敵に23ダメージを与える。
+  upgraded_effects:
+  - type: unsupported
+    reason: '未対応の効果: 廃棄札の枚数条件＋全体攻撃'
+  - type: damage
+    amount: 23
+    hits: 1
+  upgraded_base_damage: 23
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: perfected-strike
   name: Perfected Strike
   name_ja: パーフェクトストライク
@@ -1422,10 +1503,17 @@
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 6ダメージを与える。「ストライク」を含むすべてのカード1枚につき、追加で2ダメージを与える。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 「ストライク」を含むカード枚数に応じてダメージ増加'
+  upgraded_text: 6ダメージを与える。「ストライク」を含むすべてのカード1枚につき、追加で3ダメージを与える。
+  upgraded_effects:
+  - type: unsupported
+    reason: '未対応の効果: 「ストライク」を含むカード枚数に応じてダメージ増加'
+  upgraded_base_damage: 0
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: pillage
   name: Pillage
   name_ja: ぶんどる
@@ -1508,10 +1596,17 @@
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 各ターンの開始時、エナジーを1得る。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: ターン開始時のエナジー獲得'
+  upgraded_text: 各ターンの開始時、エナジーを2得る。
+  upgraded_effects:
+  - type: unsupported
+    reason: '未対応の効果: ターン開始時のエナジー獲得'
+  upgraded_base_damage: 0
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: rage
   name: Rage
   name_ja: 激怒
@@ -1588,13 +1683,26 @@
   kind: attack
   rarity: common
   cost: 1
-  base_damage: 0
+  base_damage: 7
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 7ダメージを与える。このターン、筋力2を得る。
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: damage
+    amount: 7
+    hits: 1
+  - type: gain_strength_this_turn
+    amount: 2
+  upgraded_text: 9ダメージを与える。このターン、筋力3を得る。
+  upgraded_effects:
+  - type: damage
+    amount: 9
+    hits: 1
+  - type: gain_strength_this_turn
+    amount: 3
+  upgraded_base_damage: 9
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: shrug-it-off
   name: Shrug It Off
   name_ja: 受け流し
@@ -1602,25 +1710,49 @@
   rarity: common
   cost: 1
   base_damage: 0
-  base_block: 0
+  base_block: 8
   apply_vulnerable: 0
-  text: ''
+  text: Gain 8 Block. Draw 1 card.
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: block
+    amount: 8
+  - type: draw
+    count: 1
+  upgraded_text: Gain 11 Block. Draw 1 card.
+  upgraded_effects:
+  - type: block
+    amount: 11
+  - type: draw
+    count: 1
+  upgraded_base_damage: 0
+  upgraded_base_block: 11
+  upgraded_apply_vulnerable: 0
 - id: spite
   name: Spite
   name_ja: 悪意
   kind: attack
   rarity: uncommon
   cost: 0
-  base_damage: 0
+  base_damage: 5
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 5ダメージを与える。このターン、HPを失っていた場合、2回攻撃する。
   effects:
+  - type: damage
+    amount: 5
+    hits: 1
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: このターンHPを失っていた場合、追加攻撃する'
+  upgraded_text: 5ダメージを与える。このターン、HPを失っていた場合、3回攻撃する。
+  upgraded_effects:
+  - type: damage
+    amount: 5
+    hits: 1
+  - type: unsupported
+    reason: '未対応の効果: このターンHPを失っていた場合、追加攻撃する'
+  upgraded_base_damage: 5
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: stampede
   name: Stampede
   name_ja: 暴走
@@ -1684,13 +1816,26 @@
   kind: attack
   rarity: uncommon
   cost: 1
-  base_damage: 0
+  base_damage: 12
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: すべての敵に12ダメージを与える。このターンにプレイしたアタック1枚につき、コストが1減少する。
   effects:
+  - type: damage
+    amount: 12
+    hits: 1
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: このターンにプレイしたアタック数に応じてコストが減少する'
+  upgraded_text: すべての敵に15ダメージを与える。このターンにプレイしたアタック1枚につき、コストが1減少する。
+  upgraded_effects:
+  - type: damage
+    amount: 15
+    hits: 1
+  - type: unsupported
+    reason: '未対応の効果: このターンにプレイしたアタック数に応じてコストが減少する'
+  upgraded_base_damage: 15
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: stone-armor
   name: Stone Armor
   name_ja: ストーンアーマー
@@ -1740,23 +1885,37 @@
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: ランダムな敵に3ダメージを3回与える。
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: damage
+    amount: 3
+    hits: 3
+  upgraded_text: ランダムな敵に3ダメージを4回与える。
+  upgraded_effects:
+  - type: damage
+    amount: 3
+    hits: 4
+  upgraded_base_damage: 0
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: tank
   name: Tank
   name_ja: タンク
   kind: power
   rarity: rare
   cost: 1
+  upgraded_cost: 0
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 敵から受けるダメージが2倍になる。他のプレイヤーが敵から受けるダメージが半分になる。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 被ダメージ倍率の変更（マルチプレイ）'
+  upgraded_text: 敵から受けるダメージが2倍になる。他のプレイヤーが敵から受けるダメージが半分になる。
+  upgraded_effects:
+  - type: unsupported
+    reason: '未対応の効果: 被ダメージ倍率の変更（マルチプレイ）'
 - id: taunt
   name: Taunt
   name_ja: 挑発
@@ -1903,64 +2062,115 @@
   rarity: common
   cost: 1
   base_damage: 0
-  base_block: 0
+  base_block: 7
   apply_vulnerable: 0
-  text: ''
+  text: 7ブロックを得る。ランダムなカードを1枚廃棄する。
   effects:
+  - type: block
+    amount: 7
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: ランダムなカードを1枚廃棄する'
+  upgraded_text: 9ブロックを得る。カードを1枚廃棄する。
+  upgraded_effects:
+  - type: block
+    amount: 9
+  - type: unsupported
+    reason: '未対応の効果: カードを1枚廃棄する（選択）'
+  upgraded_base_damage: 0
+  upgraded_base_block: 9
+  upgraded_apply_vulnerable: 0
 - id: twin-strike
   name: Twin Strike
   name_ja: ツインストライク
   kind: attack
   rarity: common
   cost: 1
-  base_damage: 0
+  base_damage: 5
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 5ダメージを2回与える。
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: damage
+    amount: 5
+    hits: 2
+  upgraded_text: 7ダメージを2回与える。
+  upgraded_effects:
+  - type: damage
+    amount: 7
+    hits: 2
+  upgraded_base_damage: 7
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: unmovable
   name: Unmovable
   name_ja: 盤石
   kind: power
   rarity: rare
   cost: 2
+  upgraded_cost: 1
   base_damage: 0
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 毎ターン、最初にカードからブロックを得た時、その2倍の値を得る。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 毎ターン最初のブロック獲得を2倍にする'
+  upgraded_text: 毎ターン、最初にカードからブロックを得た時、その2倍の値を得る。
+  upgraded_effects:
+  - type: unsupported
+    reason: '未対応の効果: 毎ターン最初のブロック獲得を2倍にする'
 - id: unrelenting
   name: Unrelenting
   name_ja: 冷酷
   kind: attack
   rarity: uncommon
   cost: 2
-  base_damage: 0
+  base_damage: 12
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 12ダメージを与える。次にプレイするアタックのコストは0。
   effects:
+  - type: damage
+    amount: 12
+    hits: 1
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 次にプレイするアタックのコストを0にする'
+  upgraded_text: 18ダメージを与える。次にプレイするアタックのコストは0。
+  upgraded_effects:
+  - type: damage
+    amount: 18
+    hits: 1
+  - type: unsupported
+    reason: '未対応の効果: 次にプレイするアタックのコストを0にする'
+  upgraded_base_damage: 18
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: uppercut
   name: Uppercut
   name_ja: アッパーカット
   kind: attack
   rarity: uncommon
   cost: 2
-  base_damage: 0
+  base_damage: 13
   base_block: 0
   apply_vulnerable: 0
-  text: ''
+  text: 13ダメージを与える。脱力1と弱体1を与える。
   effects:
+  - type: damage
+    amount: 13
+    hits: 1
   - type: unsupported
-    reason: '未対応の効果テキスト: '
+    reason: '未対応の効果: 脱力/弱体を付与する'
+  upgraded_text: 13ダメージを与える。脱力2と弱体2を与える。
+  upgraded_effects:
+  - type: damage
+    amount: 13
+    hits: 1
+  - type: unsupported
+    reason: '未対応の効果: 脱力/弱体を付与する'
+  upgraded_base_damage: 13
+  upgraded_base_block: 0
+  upgraded_apply_vulnerable: 0
 - id: vicious
   name: Vicious
   name_ja: 残忍
