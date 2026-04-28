@@ -176,9 +176,13 @@
   effects:
   - type: lose_hp
     amount: 3
+  - type: gain_energy
+    amount: 2
   upgraded_text: HPを3失う。エナジーを3得る。
   upgraded_effects:
   - type: lose_hp
+    amount: 3
+  - type: gain_energy
     amount: 3
   upgraded_base_damage: 0
   upgraded_base_block: 0
@@ -1079,12 +1083,22 @@
   apply_vulnerable: 0
   text: HP6を失う。エナジーを2得る。カードを3枚引く。廃棄。
   effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: lose_hp
+    amount: 6
+  - type: gain_energy
+    amount: 2
+  - type: draw
+    count: 3
+  - type: exhaust_self
   upgraded_text: HP6を失う。エナジーを2得る。カードを5枚引く。廃棄。
   upgraded_effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
+  - type: lose_hp
+    amount: 6
+  - type: gain_energy
+    amount: 2
+  - type: draw
+    count: 5
+  - type: exhaust_self
 - id: one-two-punch
   name: One-Two Punch
   name_ja: ワン・ツーパンチ
