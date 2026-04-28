@@ -1,6 +1,6 @@
 - id: aggression
   name: Aggression
-  name_ja: null
+  name_ja: 闘争心
   kind: power
   rarity: rare
   cost: 1
@@ -78,7 +78,7 @@
   upgraded_apply_vulnerable: 0
 - id: armaments
   name: Armaments
-  name_ja: null
+  name_ja: 武装
   kind: skill
   rarity: common
   cost: 1
@@ -101,7 +101,7 @@
   upgraded_apply_vulnerable: 0
 - id: ashen-strike
   name: Ashen Strike
-  name_ja: null
+  name_ja: アッシュストライク
   kind: attack
   rarity: uncommon
   cost: 1
@@ -114,7 +114,7 @@
     reason: '未対応の効果テキスト: '
 - id: barricade
   name: Barricade
-  name_ja: null
+  name_ja: バリケード
   kind: power
   rarity: rare
   cost: 3
@@ -127,7 +127,7 @@
     reason: '未対応の効果テキスト: '
 - id: bash
   name: Bash
-  name_ja: null
+  name_ja: 強打
   kind: attack
   rarity: common
   cost: 2
@@ -140,7 +140,7 @@
     reason: '未対応の効果テキスト: '
 - id: battle-trance
   name: Battle Trance
-  name_ja: null
+  name_ja: バトルトランス
   kind: skill
   rarity: uncommon
   cost: 0
@@ -199,7 +199,7 @@
   upgraded_apply_vulnerable: 0
 - id: bloodletting
   name: Bloodletting
-  name_ja: null
+  name_ja: 瀉血
   kind: skill
   rarity: common
   cost: 0
@@ -250,7 +250,7 @@
   upgraded_apply_vulnerable: 0
 - id: body-slam
   name: Body Slam
-  name_ja: null
+  name_ja: ボディスラム
   kind: attack
   rarity: common
   cost: 1
@@ -263,7 +263,7 @@
     reason: '未対応の効果テキスト: '
 - id: brand
   name: Brand
-  name_ja: null
+  name_ja: 焼印
   kind: skill
   rarity: rare
   cost: 0
@@ -294,7 +294,7 @@
   upgraded_apply_vulnerable: 0
 - id: break
   name: Break
-  name_ja: null
+  name_ja: 破砕
   kind: attack
   rarity: ancient
   cost: 1
@@ -327,7 +327,7 @@
   upgraded_apply_vulnerable: 7
 - id: breakthrough
   name: Breakthrough
-  name_ja: null
+  name_ja: 血路を開く
   kind: attack
   rarity: common
   cost: 1
@@ -340,7 +340,7 @@
     reason: '未対応の効果テキスト: '
 - id: bully
   name: Bully
-  name_ja: null
+  name_ja: ごろつき
   kind: attack
   rarity: uncommon
   cost: 0
@@ -384,7 +384,7 @@
   upgraded_apply_vulnerable: 0
 - id: cascade
   name: Cascade
-  name_ja: null
+  name_ja: カスケード
   kind: skill
   rarity: rare
   cost: 0
@@ -419,7 +419,7 @@
   upgraded_apply_vulnerable: 0
 - id: cinder
   name: Cinder
-  name_ja: null
+  name_ja: 黒焦げ
   kind: attack
   rarity: common
   cost: 2
@@ -432,7 +432,7 @@
     reason: '未対応の効果テキスト: '
 - id: clash
   name: Clash
-  name_ja: null
+  name_ja: 衝突
   kind: attack
   rarity: event
   cost: 0
@@ -445,7 +445,7 @@
     reason: '未対応の効果テキスト: '
 - id: colossus
   name: Colossus
-  name_ja: null
+  name_ja: 巨人
   kind: skill
   rarity: uncommon
   cost: 1
@@ -458,7 +458,7 @@
     reason: '未対応の効果テキスト: '
 - id: conflagration
   name: Conflagration
-  name_ja: null
+  name_ja: 猛火
   kind: attack
   rarity: rare
   cost: 1
@@ -471,7 +471,7 @@
     reason: '未対応の効果テキスト: '
 - id: corruption
   name: Corruption
-  name_ja: null
+  name_ja: 堕落
   kind: power
   rarity: ancient
   cost: 3
@@ -499,7 +499,7 @@
   upgraded_apply_vulnerable: 0
 - id: crimson-mantle
   name: Crimson Mantle
-  name_ja: null
+  name_ja: 深紅の衣
   kind: power
   rarity: rare
   cost: 1
@@ -531,7 +531,7 @@
   upgraded_apply_vulnerable: 0
 - id: cruelty
   name: Cruelty
-  name_ja: null
+  name_ja: 無慈悲
   kind: power
   rarity: rare
   cost: 1
@@ -544,7 +544,7 @@
     reason: '未対応の効果テキスト: '
 - id: dark-embrace
   name: Dark Embrace
-  name_ja: null
+  name_ja: 闇の抱擁
   kind: power
   rarity: rare
   cost: 2
@@ -557,7 +557,7 @@
     reason: '未対応の効果テキスト: '
 - id: defend-ironclad
   name: Defend
-  name_ja: null
+  name_ja: 防御
   kind: skill
   rarity: common
   cost: 1
@@ -570,7 +570,7 @@
     reason: '未対応の効果テキスト: '
 - id: demon-form
   name: Demon Form
-  name_ja: null
+  name_ja: 悪魔化
   kind: power
   rarity: rare
   cost: 3
@@ -609,7 +609,7 @@
   upgraded_apply_vulnerable: 0
 - id: demonic-shield
   name: Demonic Shield
-  name_ja: null
+  name_ja: 悪魔の盾
   kind: skill
   rarity: uncommon
   cost: 0
@@ -622,7 +622,7 @@
     reason: '未対応の効果テキスト: '
 - id: dismantle
   name: Dismantle
-  name_ja: null
+  name_ja: 解体
   kind: attack
   rarity: uncommon
   cost: 1
@@ -635,7 +635,7 @@
     reason: '未対応の効果テキスト: '
 - id: dominate
   name: Dominate
-  name_ja: null
+  name_ja: 威圧
   kind: skill
   rarity: uncommon
   cost: 1
@@ -676,7 +676,7 @@
   upgraded_apply_vulnerable: 0
 - id: dual-wield
   name: Dual Wield
-  name_ja: null
+  name_ja: 二刀流
   kind: skill
   rarity: event
   cost: 1
@@ -689,7 +689,7 @@
     reason: '未対応の効果テキスト: '
 - id: entrench
   name: Entrench
-  name_ja: null
+  name_ja: 塹壕
   kind: skill
   rarity: event
   cost: 2
@@ -702,7 +702,7 @@
     reason: '未対応の効果テキスト: '
 - id: evil-eye
   name: Evil Eye
-  name_ja: null
+  name_ja: イービルアイ
   kind: skill
   rarity: uncommon
   cost: 1
@@ -715,7 +715,7 @@
     reason: '未対応の効果テキスト: '
 - id: expect-a-fight
   name: Expect a Fight
-  name_ja: null
+  name_ja: 戦いの予感
   kind: skill
   rarity: uncommon
   cost: 2
@@ -757,7 +757,7 @@
   upgraded_apply_vulnerable: 0
 - id: feed
   name: Feed
-  name_ja: null
+  name_ja: 捕食
   kind: attack
   rarity: rare
   cost: 1
@@ -791,7 +791,7 @@
   upgraded_apply_vulnerable: 0
 - id: feel-no-pain
   name: Feel No Pain
-  name_ja: null
+  name_ja: 無痛
   kind: power
   rarity: uncommon
   cost: 1
@@ -838,7 +838,7 @@
   upgraded_apply_vulnerable: 0
 - id: fight-me
   name: Fight Me!
-  name_ja: null
+  name_ja: 俺と戦え！
   kind: attack
   rarity: uncommon
   cost: 2
@@ -908,7 +908,7 @@
   upgraded_apply_vulnerable: 0
 - id: forgotten-ritual
   name: Forgotten Ritual
-  name_ja: null
+  name_ja: 忘れられし儀式
   kind: skill
   rarity: uncommon
   cost: 1
@@ -952,7 +952,7 @@
   upgraded_apply_vulnerable: 0
 - id: havoc
   name: Havoc
-  name_ja: null
+  name_ja: 荒廃
   kind: skill
   rarity: common
   cost: 1
@@ -979,7 +979,7 @@
   upgraded_apply_vulnerable: 0
 - id: headbutt
   name: Headbutt
-  name_ja: null
+  name_ja: ヘッドバット
   kind: attack
   rarity: common
   cost: 1
@@ -1013,7 +1013,7 @@
   upgraded_apply_vulnerable: 0
 - id: hellraiser
   name: Hellraiser
-  name_ja: null
+  name_ja: ヘル・レイザー
   kind: power
   rarity: rare
   cost: 2
@@ -1136,7 +1136,7 @@
   upgraded_apply_vulnerable: 0
 - id: infernal-blade
   name: Infernal Blade
-  name_ja: null
+  name_ja: 非道の刃
   kind: skill
   rarity: uncommon
   cost: 1
@@ -1214,7 +1214,7 @@
   upgraded_apply_vulnerable: 0
 - id: inflame
   name: Inflame
-  name_ja: null
+  name_ja: 発火
   kind: power
   rarity: uncommon
   cost: 1
@@ -1309,7 +1309,7 @@
   upgraded_apply_vulnerable: 0
 - id: juggling
   name: Juggling
-  name_ja: null
+  name_ja: ジャグリング
   kind: power
   rarity: uncommon
   cost: 1
@@ -1337,7 +1337,7 @@
   upgraded_apply_vulnerable: 0
 - id: mangle
   name: Mangle
-  name_ja: null
+  name_ja: 切り刻み
   kind: attack
   rarity: rare
   cost: 3
@@ -1350,7 +1350,7 @@
     reason: '未対応の効果テキスト: '
 - id: molten-fist
   name: Molten Fist
-  name_ja: null
+  name_ja: 溶岩の拳
   kind: attack
   rarity: common
   cost: 1
@@ -1363,7 +1363,7 @@
     reason: '未対応の効果テキスト: '
 - id: not-yet
   name: Not Yet
-  name_ja: null
+  name_ja: 未だ倒れず
   kind: skill
   rarity: rare
   cost: 2
@@ -1376,7 +1376,7 @@
     reason: '未対応の効果テキスト: '
 - id: offering
   name: Offering
-  name_ja: null
+  name_ja: 供物
   kind: skill
   rarity: rare
   cost: 0
@@ -1389,7 +1389,7 @@
     reason: '未対応の効果テキスト: '
 - id: one-two-punch
   name: One-Two Punch
-  name_ja: null
+  name_ja: ワン・ツーパンチ
   kind: skill
   rarity: rare
   cost: 1
@@ -1402,7 +1402,7 @@
     reason: '未対応の効果テキスト: '
 - id: pacts-end
   name: Pact's End
-  name_ja: null
+  name_ja: 契約の終わり
   kind: attack
   rarity: rare
   cost: 0
@@ -1415,7 +1415,7 @@
     reason: '未対応の効果テキスト: '
 - id: perfected-strike
   name: Perfected Strike
-  name_ja: null
+  name_ja: パーフェクトストライク
   kind: attack
   rarity: common
   cost: 2
@@ -1428,7 +1428,7 @@
     reason: '未対応の効果テキスト: '
 - id: pillage
   name: Pillage
-  name_ja: null
+  name_ja: ぶんどる
   kind: attack
   rarity: uncommon
   cost: 1
@@ -1488,7 +1488,7 @@
   upgraded_apply_vulnerable: 0
 - id: primal-force
   name: Primal Force
-  name_ja: null
+  name_ja: 原始の力
   kind: skill
   rarity: rare
   cost: 0
@@ -1501,7 +1501,7 @@
     reason: '未対応の効果テキスト: '
 - id: pyre
   name: Pyre
-  name_ja: null
+  name_ja: かがり火
   kind: power
   rarity: rare
   cost: 2
@@ -1545,7 +1545,7 @@
   upgraded_apply_vulnerable: 0
 - id: rampage
   name: Rampage
-  name_ja: null
+  name_ja: ランページ
   kind: attack
   rarity: uncommon
   cost: 1
@@ -1558,7 +1558,7 @@
     reason: '未対応の効果テキスト: '
 - id: rupture
   name: Rupture
-  name_ja: null
+  name_ja: 血の沸騰
   kind: power
   rarity: uncommon
   cost: 1
@@ -1571,7 +1571,7 @@
     reason: '未対応の効果テキスト: '
 - id: second-wind
   name: Second Wind
-  name_ja: null
+  name_ja: セカンドウィンド
   kind: skill
   rarity: uncommon
   cost: 1
@@ -1584,7 +1584,7 @@
     reason: '未対応の効果テキスト: '
 - id: setup-strike
   name: Setup Strike
-  name_ja: null
+  name_ja: セットアップストライク
   kind: attack
   rarity: common
   cost: 1
@@ -1597,7 +1597,7 @@
     reason: '未対応の効果テキスト: '
 - id: shrug-it-off
   name: Shrug It Off
-  name_ja: null
+  name_ja: 受け流し
   kind: skill
   rarity: common
   cost: 1
@@ -1610,7 +1610,7 @@
     reason: '未対応の効果テキスト: '
 - id: spite
   name: Spite
-  name_ja: null
+  name_ja: 悪意
   kind: attack
   rarity: uncommon
   cost: 0
@@ -1623,7 +1623,7 @@
     reason: '未対応の効果テキスト: '
 - id: stampede
   name: Stampede
-  name_ja: null
+  name_ja: 暴走
   kind: power
   rarity: uncommon
   cost: 2
@@ -1667,7 +1667,7 @@
   upgraded_apply_vulnerable: 0
 - id: stoke
   name: Stoke
-  name_ja: null
+  name_ja: 焚きつけ
   kind: skill
   rarity: rare
   cost: 1
@@ -1680,7 +1680,7 @@
     reason: '未対応の効果テキスト: '
 - id: stomp
   name: Stomp
-  name_ja: null
+  name_ja: 踏みつけ
   kind: attack
   rarity: uncommon
   cost: 1
@@ -1693,7 +1693,7 @@
     reason: '未対応の効果テキスト: '
 - id: stone-armor
   name: Stone Armor
-  name_ja: null
+  name_ja: ストーンアーマー
   kind: power
   rarity: uncommon
   cost: 1
@@ -1706,7 +1706,7 @@
     reason: '未対応の効果テキスト: '
 - id: strike-ironclad
   name: Strike
-  name_ja: null
+  name_ja: ストライク
   kind: attack
   rarity: common
   cost: 1
@@ -1733,7 +1733,7 @@
   upgraded_apply_vulnerable: 0
 - id: sword-boomerang
   name: Sword Boomerang
-  name_ja: null
+  name_ja: ソードブーメラン
   kind: attack
   rarity: common
   cost: 1
@@ -1746,7 +1746,7 @@
     reason: '未対応の効果テキスト: '
 - id: tank
   name: Tank
-  name_ja: null
+  name_ja: タンク
   kind: power
   rarity: rare
   cost: 1
@@ -1759,7 +1759,7 @@
     reason: '未対応の効果テキスト: '
 - id: taunt
   name: Taunt
-  name_ja: null
+  name_ja: 挑発
   kind: skill
   rarity: uncommon
   cost: 1
@@ -1792,7 +1792,7 @@
   upgraded_apply_vulnerable: 2
 - id: tear-asunder
   name: Tear Asunder
-  name_ja: null
+  name_ja: 八つ裂き
   kind: attack
   rarity: rare
   cost: 2
@@ -1805,7 +1805,7 @@
     reason: '未対応の効果テキスト: '
 - id: thrash
   name: Thrash
-  name_ja: null
+  name_ja: 滅多打ち
   kind: attack
   rarity: rare
   cost: 1
@@ -1837,7 +1837,7 @@
   upgraded_apply_vulnerable: 0
 - id: thunderclap
   name: Thunderclap
-  name_ja: null
+  name_ja: サンダークラップ
   kind: attack
   rarity: common
   cost: 1
@@ -1869,7 +1869,7 @@
   upgraded_apply_vulnerable: 1
 - id: tremble
   name: Tremble
-  name_ja: null
+  name_ja: 身震い
   kind: skill
   rarity: common
   cost: 1
@@ -1898,7 +1898,7 @@
   upgraded_apply_vulnerable: 4
 - id: true-grit
   name: True Grit
-  name_ja: null
+  name_ja: 不屈の闘志
   kind: skill
   rarity: common
   cost: 1
@@ -1911,7 +1911,7 @@
     reason: '未対応の効果テキスト: '
 - id: twin-strike
   name: Twin Strike
-  name_ja: null
+  name_ja: ツインストライク
   kind: attack
   rarity: common
   cost: 1
@@ -1924,7 +1924,7 @@
     reason: '未対応の効果テキスト: '
 - id: unmovable
   name: Unmovable
-  name_ja: null
+  name_ja: 盤石
   kind: power
   rarity: rare
   cost: 2
@@ -1937,7 +1937,7 @@
     reason: '未対応の効果テキスト: '
 - id: unrelenting
   name: Unrelenting
-  name_ja: null
+  name_ja: 冷酷
   kind: attack
   rarity: uncommon
   cost: 2
@@ -1950,7 +1950,7 @@
     reason: '未対応の効果テキスト: '
 - id: uppercut
   name: Uppercut
-  name_ja: null
+  name_ja: アッパーカット
   kind: attack
   rarity: uncommon
   cost: 2
@@ -1963,7 +1963,7 @@
     reason: '未対応の効果テキスト: '
 - id: vicious
   name: Vicious
-  name_ja: null
+  name_ja: 残忍
   kind: power
   rarity: uncommon
   cost: 1
@@ -1976,7 +1976,7 @@
     reason: '未対応の効果テキスト: '
 - id: whirlwind
   name: Whirlwind
-  name_ja: null
+  name_ja: 旋風刃
   kind: attack
   rarity: uncommon
   cost: 0
