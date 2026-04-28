@@ -10,21 +10,11 @@
   text: ターン開始時、捨て札にあるランダムなアタックを1枚手札に加え、それをアップグレードする。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Aggression At the start of your turn, put a random
-      Attack from your Discard Pile into your Hand and Upgrade it. Character Ironclad
-      Type Power Cost 1 Rarity Rare Aggression + UPGRADED Innate . At the start of
-      your turn, put a random Attack from your Discard Pile into your Hand and Upgrade
-      it. Jorbs Ironclad thrives off of ways to draw more cards and play more cards
-      every turn. Drawing upgraded Attacks can overpower the enemies quite quickly,
-      while you block with your health pool and some defensive relics or powers.'
+    reason: '未対応の効果: ターン開始時、捨て札のランダムなアタックを手札に加え、アップグレードする'
   upgraded_text: 天賦。ターン開始時、捨て札にあるランダムなアタックを1枚手札に加え、それをアップグレードする。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Innate . At the start of your turn, put a random Attack from
-      your Discard Pile into your Hand and Upgrade it. Jorbs Ironclad thrives off
-      of ways to draw more cards and play more cards every turn. Drawing upgraded
-      Attacks can overpower the enemies quite quickly, while you block with your health
-      pool and some defensive relics or powers.'
+    reason: '未対応の効果: （天賦）ターン開始時、捨て札のランダムなアタックを手札に加え、アップグレードする'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -344,19 +334,11 @@
   text: 山札の上からX枚のカードをプレイする。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Cascade Play the top X cards of your Draw Pile .
-      Character Ironclad Type Skill Cost X Rarity Rare Cascade + UPGRADED Play the
-      top X+1 cards of your Draw Pile . Jorbs Ironclad has some ways to make massive
-      amounts of energy, like Bloodletting+, Expect a Fight, Forgotten Ritual, and
-      Offering. Sometimes Relics might provide a lot as well. Cascade is an awesome
-      way to spend that energy.'
+    reason: '未対応の効果: 山札の上からX枚のカードを自動でプレイする'
   upgraded_text: 山札の上からX+1枚のカードをプレイする。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Play the top X+1 cards of your Draw Pile . Jorbs Ironclad
-      has some ways to make massive amounts of energy, like Bloodletting+, Expect
-      a Fight, Forgotten Ritual, and Offering. Sometimes Relics might provide a lot
-      as well. Cascade is an awesome way to spend that energy.'
+    reason: '未対応の効果: 山札の上からX+1枚のカードを自動でプレイする'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -440,15 +422,11 @@
   text: スキルがエナジーを消費しない。プレイしたスキルは廃棄する。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Corruption Skills cost 0 . Whenever you play a Skill,
-      Exhaust it. Character Ironclad Type Power Cost 3 Rarity Ancient Corruption +
-      UPGRADED Cost changes from 3 to 2 Jorbs One of the most powerful cards in Spire
-      1, rightly given the Ancient treatment for Spire 2.'
+    reason: '未対応の効果: スキルのコストを0にし、プレイしたスキルを廃棄する'
   upgraded_text: コストが3から2になる。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Cost changes from 3 to 2 Jorbs One of the most powerful cards
-      in Spire 1, rightly given the Ancient treatment for Spire 2.'
+    reason: '未対応の効果: コスト変化（3→2）'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -547,21 +525,11 @@
   text: ターン開始時、筋力2を得る。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Demon Form At the start of your turn, gain 2 Strength
-      . Character Ironclad Type Power Cost 3 Rarity Rare Demon Form + UPGRADED At
-      the start of your turn, gain 3 Strength . Jorbs Demon Form is a ~power~ful way
-      to scale your deck up over the course of a fight, but I wouldn''t say it''s
-      the strongest option in Ironclad''s card pool by any stretch of the imagination.
-      Something like scaling up a Thrash gets you extra damage much more quickly than
-      this does.'
+    reason: '未対応の効果: ターン開始時に筋力を得る'
   upgraded_text: ターン開始時、筋力3を得る。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: At the start of your turn, gain 3 Strength . Jorbs Demon
-      Form is a ~power~ful way to scale your deck up over the course of a fight, but
-      I wouldn''t say it''s the strongest option in Ironclad''s card pool by any stretch
-      of the imagination. Something like scaling up a Thrash gets you extra damage
-      much more quickly than this does.'
+    reason: '未対応の効果: ターン開始時に筋力を得る'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -699,23 +667,11 @@
   text: 手札のアタック1枚につき、エナジーを1得る。このターン、追加のエナジーを得ることができない。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Expect a Fight Gain for each Attack in your Hand
-      . You cannot gain additional this turn. Character Ironclad Type Skill Cost 2
-      Rarity Uncommon Expect a Fight + UPGRADED Cost changes from 2 to 1 Jorbs Expect
-      a Fight is one of the ways that Ironclad can "accidentally" end up in an unending
-      loop. Put enough card draw in your deck, and you can easily have 4+ Attacks
-      in your hand at once, which will let you play Expect a Fight to gain enough
-      energy to play more draw cards... until you draw Expect a Fight again... you
-      probably see where I''m going with this.'
+    reason: '未対応の効果: 手札のアタック枚数に応じてエナジーを得る（このターン追加獲得不可）'
   upgraded_text: 手札のアタック1枚につき、エナジーを1得る。このターン、追加のエナジーを得ることができない。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Cost changes from 2 to 1 Jorbs Expect a Fight is one of the
-      ways that Ironclad can "accidentally" end up in an unending loop. Put enough
-      card draw in your deck, and you can easily have 4+ Attacks in your hand at once,
-      which will let you play Expect a Fight to gain enough energy to play more draw
-      cards... until you draw Expect a Fight again... you probably see where I''m
-      going with this.'
+    reason: '未対応の効果: 手札のアタック枚数に応じてエナジーを得る（このターン追加獲得不可）'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -840,23 +796,11 @@
   text: このターン、カードを廃棄していた場合、エナジーを3得る。廃棄。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Forgotten Ritual If you Exhausted a card this turn,
-      gain . Exhaust . Character Ironclad Type Skill Cost 1 Rarity Uncommon Forgotten
-      Ritual + UPGRADED If you Exhausted a card this turn, gain 4 . Exhaust . Jorbs
-      Similar to Expect a Fight, Forgotten Ritual is a way to "accidentally" end up
-      in a situation where you''re able to afford every card until you''ve drawn Forgotten
-      Ritual again. Put some Burning Pacts and Pommel Strike+''s into a deck with
-      this card and you''ll theoretically kill every enemy on turn one, as long as
-      you can remove the other cards which are in the way of your combo.'
+    reason: '未対応の効果: （このターン廃棄した場合）エナジー獲得＋廃棄'
   upgraded_text: このターン、カードを廃棄していた場合、エナジーを4得る。廃棄。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: If you Exhausted a card this turn, gain 4 . Exhaust . Jorbs
-      Similar to Expect a Fight, Forgotten Ritual is a way to "accidentally" end up
-      in a situation where you''re able to afford every card until you''ve drawn Forgotten
-      Ritual again. Put some Burning Pacts and Pommel Strike+''s into a deck with
-      this card and you''ll theoretically kill every enemy on turn one, as long as
-      you can remove the other cards which are in the way of your combo.'
+    reason: '未対応の効果: （このターン廃棄した場合）エナジー獲得＋廃棄'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -872,15 +816,11 @@
   text: 山札の一番上にあるカードをプレイし、それを廃棄する。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Havoc Play the top card of your Draw Pile and Exhaust
-      it. Character Ironclad Type Skill Cost 1 Rarity Common Havoc + UPGRADED Cost
-      changes from 1 to 0 Jorbs One of Ironclad''s trickiest cards, both to evaluate
-      and to use correctly.'
+    reason: '未対応の効果: 山札の一番上のカードを自動でプレイし、廃棄する'
   upgraded_text: 山札の一番上にあるカードをプレイし、それを廃棄する。コストが1から0になる。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Cost changes from 1 to 0 Jorbs One of Ironclad''s trickiest
-      cards, both to evaluate and to use correctly.'
+    reason: '未対応の効果: 山札の一番上のカードを自動でプレイし、廃棄する（コスト0）'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -918,15 +858,11 @@
   text: 「ストライク」を含むカードを引くたび、ランダムな敵1体に対して自動でプレイする。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Hellraiser Whenever you draw a card containing “Strike”,
-      it is played against a random enemy. Character Ironclad Type Power Cost 2 Rarity
-      Rare Hellraiser + UPGRADED Cost changes from 2 to 1 Jorbs If Hellraiser isn''t
-      a good card, I guess I''ll be building a bad deck.'
+    reason: '未対応の効果: 「ストライク」を含むカードを引いた時、ランダムな敵へ自動でプレイする'
   upgraded_text: 「ストライク」を含むカードを引くたび、ランダムな敵1体に対して自動でプレイする。コストが2から1になる。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Cost changes from 2 to 1 Jorbs If Hellraiser isn''t a good
-      card, I guess I''ll be building a bad deck.'
+    reason: '未対応の効果: 「ストライク」を含むカードを引いた時、ランダムな敵へ自動でプレイする（コスト1）'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -1010,23 +946,11 @@
   text: ランダムなアタックを1枚手札に加える。このターン、それはコストを支払わずにプレイできる。廃棄。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Infernal Blade Add a random Attack into your Hand
-      . It''s free to play this turn. Exhaust . Character Ironclad Type Skill Cost
-      1 Rarity Uncommon Infernal Blade + UPGRADED Cost changes from 1 to 0 Jorbs Ironclad
-      has enough expensive attacks and reasons to care about a card exhausting that
-      Infernal Blade can be worth picking up as a way to deal some damage in Act 1,
-      despite the variance inherent in how it performs. Sometimes you''ll hit Bludgeon
-      or Mangle and love it, other times you''ll hit an Anger or Whirlwind and wish
-      you had taken a different card.'
+    reason: '未対応の効果: ランダムなアタックを生成し、このターン無料化して廃棄する'
   upgraded_text: ランダムなアタックを1枚手札に加える。このターン、それはコストを支払わずにプレイできる。廃棄。コストが1から0になる。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Cost changes from 1 to 0 Jorbs Ironclad has enough expensive
-      attacks and reasons to care about a card exhausting that Infernal Blade can
-      be worth picking up as a way to deal some damage in Act 1, despite the variance
-      inherent in how it performs. Sometimes you''ll hit Bludgeon or Mangle and love
-      it, other times you''ll hit an Anger or Whirlwind and wish you had taken a different
-      card.'
+    reason: '未対応の効果: ランダムなアタックを生成し、このターン無料化して廃棄する（コスト0）'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -1068,17 +992,11 @@
   text: 筋力2を得る。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Inflame Gain 2 Strength . Character Ironclad Type
-      Power Cost 1 Rarity Uncommon Inflame + UPGRADED Gain 3 Strength . Jorbs 2(3)
-      Strength can make a difference in some Elite and Boss fights, and can synergize
-      with multi-hit cards. It''s especially good with Thrash, which gains more damage
-      from all the cards it eats.'
+    reason: '未対応の効果: 筋力を得る'
   upgraded_text: 筋力3を得る。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Gain 3 Strength . Jorbs 2(3) Strength can make a difference
-      in some Elite and Boss fights, and can synergize with multi-hit cards. It''s
-      especially good with Thrash, which gains more damage from all the cards it eats.'
+    reason: '未対応の効果: 筋力を得る'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -1142,15 +1060,11 @@
   text: 毎ターン、3枚目にプレイしたアタックのコピーを1枚手札に加える。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Juggling Add a copy of the third Attack you play
-      each turn into your Hand . Character Ironclad Type Power Cost 1 Rarity Uncommon
-      Juggling + UPGRADED Innate . Add a copy of the third Attack you play each turn
-      into your Hand . Jorbs Some ways to try this card out:'
+    reason: '未対応の効果: 毎ターン3枚目にプレイしたアタックのコピーを手札に加える'
   upgraded_text: 天賦。毎ターン、3枚目にプレイしたアタックのコピーを1枚手札に加える。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Innate . Add a copy of the third Attack you play each turn
-      into your Hand . Jorbs Some ways to try this card out:'
+    reason: '未対応の効果: （天賦）毎ターン3枚目にプレイしたアタックのコピーを手札に加える'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
@@ -1489,23 +1403,11 @@
   text: ターン終了時、手札にあるランダムなアタック1枚を、ランダムな敵にプレイする。
   effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Upgraded Stampede At the end of your turn, 1 random Attack
-      in your Hand is played against a random enemy. Character Ironclad Type Power
-      Cost 2 Rarity Uncommon Stampede + UPGRADED Cost changes from 2 to 1 Jorbs I''ve
-      been very impressed with Stampede. Especially paired with some of Ironclad''s
-      3-cost attacks like Bludgeon and Mangle, it outputs a ton of damage very quickly.
-      I haven''t found it to do as well later on, where it can even be a bit awkward
-      with something like Fiend Fire, but I''m usually happy to add one to my deck
-      in Act 1 and might even upgrade it to get it into play more consistently.'
+    reason: '未対応の効果: ターン終了時、手札のランダムなアタックをランダムな敵へ自動でプレイする'
   upgraded_text: ターン終了時、手札にあるランダムなアタック1枚を、ランダムな敵にプレイする。コストが2から1になる。
   upgraded_effects:
   - type: unsupported
-    reason: '未対応の効果テキスト: Cost changes from 2 to 1 Jorbs I''ve been very impressed
-      with Stampede. Especially paired with some of Ironclad''s 3-cost attacks like
-      Bludgeon and Mangle, it outputs a ton of damage very quickly. I haven''t found
-      it to do as well later on, where it can even be a bit awkward with something
-      like Fiend Fire, but I''m usually happy to add one to my deck in Act 1 and might
-      even upgrade it to get it into play more consistently.'
+    reason: '未対応の効果: ターン終了時、手札のランダムなアタックをランダムな敵へ自動でプレイする（コスト1）'
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
