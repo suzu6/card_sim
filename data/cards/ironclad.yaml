@@ -359,23 +359,6 @@
   upgraded_effects:
   - type: unsupported
     reason: '未対応の効果テキスト: '
-- id: clash
-  name: Clash
-  name_ja: 衝突
-  kind: attack
-  rarity: event
-  cost: 0
-  base_damage: 0
-  base_block: 0
-  apply_vulnerable: 0
-  text: （効果テキスト未登録）
-  effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
-  upgraded_text: （効果テキスト未登録）
-  upgraded_effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
 - id: colossus
   name: Colossus
   name_ja: 巨人
@@ -604,40 +587,6 @@
   upgraded_base_damage: 0
   upgraded_base_block: 0
   upgraded_apply_vulnerable: 0
-- id: dual-wield
-  name: Dual Wield
-  name_ja: 二刀流
-  kind: skill
-  rarity: event
-  cost: 1
-  base_damage: 0
-  base_block: 0
-  apply_vulnerable: 0
-  text: （効果テキスト未登録）
-  effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
-  upgraded_text: （効果テキスト未登録）
-  upgraded_effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
-- id: entrench
-  name: Entrench
-  name_ja: 塹壕
-  kind: skill
-  rarity: event
-  cost: 2
-  base_damage: 0
-  base_block: 0
-  apply_vulnerable: 0
-  text: （効果テキスト未登録）
-  effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
-  upgraded_text: （効果テキスト未登録）
-  upgraded_effects:
-  - type: unsupported
-    reason: '未対応の効果テキスト: '
 - id: evil-eye
   name: Evil Eye
   name_ja: イービルアイ
