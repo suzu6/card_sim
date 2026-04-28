@@ -1,7 +1,7 @@
 cards:
-  - id: strike
+  - id: strike-ironclad
     count: 5
-  - id: defend
+  - id: defend-ironclad
     count: 4
   - id: bash
     count: 1
